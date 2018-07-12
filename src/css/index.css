@@ -1,0 +1,126 @@
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+display: none;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #cccccc;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #969393;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background: #000;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position:relative;
+}
+
+.particlesContain {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.particlesContain div {
+  height: 100%;
+}
+
+.particlesFix {
+  z-index: 1
+}
+
+.contain {
+  width: 1000px;
+  margin: auto;
+}
+
+.contactoButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 25px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: 2px solid #ffe226;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffe226;
+  transition: .4s
+}
+
+.contactoButton:hover{
+  background: #ffe226;
+  color: #000;
+}
+
+.avatar {
+  height: 200px;
+  border-radius: 50%;
+  opacity: .5;
+  transition: .8s;
+}
+
+.avatar:hover {
+  opacity: 1
+}
+
+header h1 {
+  color: #fff;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight:bold;
+}
+
+.headerText {
+text-align: center;
+font-weight: normal;
+font-size: 25px;
+}
+
+.headerText span {
+  font-weight: lighter;
+}
+
+.downIcon {
+  position: absolute;
+  bottom: 10px;
+  color: #fff;
+  font-size: 35px;
+  animation-name: iconDown;
+  animation-duration: .7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-out;
+}
+
+.bio {
+  text-align: center;
+}
+
+
+/* ANIMACIONES */
+
+@keyframes iconDown {
+  0% {
+    opacity: .2;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
