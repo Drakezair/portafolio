@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -17,6 +17,8 @@ display: none;
 
 body {
   margin: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 header {
@@ -44,8 +46,38 @@ header {
 }
 
 .contain {
-  width: 1000px;
+  width: 800px;
   margin: auto;
+}
+
+.socialContain {
+  margin: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.socialContain a {
+  color: #fff;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.socialContain i {
+  transition: .4s;
+}
+
+.socialContain i:hover {
+  transform: scale(1.6);
+}
+
+.socialContain img {
+  height: 35px;
+  transition: .4s
+}
+
+.socialContain img:hover {
+  transform: scale(1.6);
 }
 
 .contactoButton {
@@ -71,12 +103,7 @@ header {
 .avatar {
   height: 200px;
   border-radius: 50%;
-  opacity: .5;
-  transition: .8s;
-}
-
-.avatar:hover {
-  opacity: 1
+  animation: pulse .7s infinite alternate linear;
 }
 
 header h1 {
@@ -103,24 +130,550 @@ font-size: 25px;
   animation-name: iconDown;
   animation-duration: .7s;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-out;
+  animation-direction: alternate-reverse;
+  animation-timing-function:linear;
 }
 
 .bio {
   text-align: center;
+  background: #ffe226;
+  padding: 100px 0 280px;
+}
+
+.bio h1 {
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #1f1f1f;
+  margin: 0 0 10px;
+  position: relative;
+  top: 800px;
+  transition: .8s;
+  opacity: 0;
 }
 
 
+.bio p {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  top: 800px;
+  transition: .8s;
+  transition-delay: .2s;
+  opacity: 0;
+}
+
+.bioButton {
+  text-decoration: none;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px 25px;
+  color: #000;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  position: relative;
+  transition: .8s;
+  top: 800px;
+  opacity: 0;
+  animation-delay: .4s !important;
+}
+
+.bioButton:hover {
+  color: #ffe226;
+  background: #000;
+}
+
+.workInfo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 700px;
+}
+
+.workInfoWrap {
+  margin: 0 0 100px;
+  box-shadow: 2px 5px 2px rgba(226, 237, 242, 0.89), -2px -2px rgba(233, 240, 243, 0.48);
+  position: absolute;
+  display: flex;
+  top: 650px;
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0;
+  flex-wrap: wrap;
+  transition: 1.4s;
+}
+
+.workInfo div:nth-last-child(1) {
+  border: none;
+}
+
+.tagWork {
+  height: 800px;
+  width: 400px;
+  background: #ffffff;
+  border-right: 1px #cbcbcb solid;
+  text-align: center;
+  padding: 85px 50px;
+  box-sizing: border-box;
+}
+
+.tagWork i {
+  color: #003ac8;
+  font-size: 60px;
+  display: block;
+}
+
+.tagTitle {
+  font-size: 30px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  margin: 60px 0 10px;
+}
+
+.tagInfo {
+  color: #626262;
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: lighter;
+  margin: 10px 0;
+}
+
+.tagSubTitle {
+  font-size: 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #3b74ff;
+  margin: 40px 0 10px;
+}
+
+.tagText {
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: lighter;
+  margin: 10px 0;
+  color: #626262;
+}
+
+.recentWork {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.recentTitle {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  position: relative;
+  top: 800px;
+  opacity: 0;
+  transition: .8s;
+}
+
+.recentGrid {
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 70px;
+}
+
+.recentCard {
+  height: 200px;
+  width: 260px;
+  opacity: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #000;
+  transition: .6s;
+  box-sizing: border-box;
+}
+
+.recentCard:hover {
+  opacity: .9;
+}
+
+.recentCard:hover .recentCardTitle, .recentCard:hover .recentCardText, .recentCard:hover .recentCardButton{
+  transform: translateY(0);
+}
+
+.recentCardTitle {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  transform: translateY(-100px);
+  transition: .5s;
+}
+
+.recentCardText {
+  margin: 0;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  margin: 10px 0 25px;
+  transform: translateY(-100px);
+  transition: .5s;
+}
+
+.recentCardButton {
+  padding: 10px 25px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  border: #ffe226 solid 2px;
+  color: #ffe226;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .5s;
+  transform: translateY(100px);
+  animation-delay: 1.4s;
+}
+
+.recentCardButton:hover {
+  background: #ffe226;
+  color: #000;
+}
+
+.recentButton {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: bold;
+  border: 2px solid #000;
+  color: #000;
+  border-radius: 40px;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: .7s;
+  position: relative;
+  opacity: 0;
+  animation-delay: 1s !important;
+}
+
+.recentButton:hover {
+  background: #000;
+  color: #fff;
+}
+
+.stack {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.stackTitle {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  transition: .7s;
+  position: relative;
+  top: 800px;
+  opacity: 0;
+}
+
+.stackSubTitle {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b74ff;
+  margin: 40px 0 0;
+  position: relative;
+  top: 800px;
+  opacity: 0;
+  transition: .7s .4s;
+}
+
+.stackTexto {
+  font-size: 20px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: lighter;
+  opacity: 0;
+  position: relative;
+  top: 800px;
+  transition: .7s .2s;
+}
+
+.stackLogos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stackItem1 {
+  position: relative;
+  opacity: 0;
+  right: 800px;
+  transition: .7s .6s;
+}
+
+.stackItem2 {
+  position: relative;
+  opacity: 0;
+  top: 800px;
+  transition: .7s .6s
+}
+
+.stackItem3 {
+  position: relative;
+  opacity: 0;
+  left: 800px;
+  transition: .7s .6s
+}
+
+.act {
+  text-align: center;
+  background: #3b74ff;
+  padding: 80px;
+  color: #fff;
+}
+
+.actTitle {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  opacity: 0;
+  position: relative;
+  top: 800px;
+  transition: .7s;
+}
+
+.actTexto {
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: 'Montserrat Alternates', sans-serif;
+  opacity: 0;
+  position: relative;
+  top: 800px;
+  transition: .7s .2s;
+  opacity: 0;
+}
+
+.estudios {
+  padding: 100px;
+  text-align: center;
+}
+
+.estudiosTitle {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 30px;
+  position: relative;
+  top: 800px;
+  transition: .7s .4s;
+  opacity: 0;
+}
+
+.estudiosText {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  margin-bottom: 40px;
+  position: relative;
+  top: 800px;
+  transition: .7s .6s;
+  opacity: 0;
+}
+
+.estudiosButton {
+  padding: 10px 20px;
+  border: 2px solid #3b74ff;
+  color: #3b74ff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  transition: .8s;
+  opacity: 0;
+  position: relative;
+  animation-delay: .6s !important;
+}
+
+.estudiosButton:hover {
+  background: #3b74ff;
+  color: #fff;
+}
+
+.Skills {
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 30px;
+  padding: 100px 0;
+  height: 530px
+}
+
+.skillsTitle {
+  transition: .8s;
+  transform: scale(0);
+  opacity:  0;
+  position: relative;
+}
+
+.blog {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.blogTitle {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 30px;
+  position: relative;
+  top:300px;
+  transition: .8s;
+  opacity:0;
+}
+
+.blogText {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 20px;
+  position: relative;
+  top:300px;
+  transition: .8s .4s;
+  opacity:0;
+}
+
+.blog a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  top:300px;
+  animation-delay: .6s !important;
+  opacity:0;
+}
+
+.blog i {
+  font-size: 100px;
+  transition: .7s;
+  line-height: .87 !important;
+  margin-top: 20px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.blog i:hover {
+  color: #fff;
+  background: #000;
+}
+
+/* UTILITIES */
+
+.divider {
+  border-top: 1px solid #f1f1f1;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.show {
+  top:0 !important;
+  right: 0 !important;
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.showR {
+  left:0 !important;
+  opacity: 1 !important;
+}
+
+.showButton {
+  animation: upAnim .8s forwards;
+}
+
+.showWork {
+  top:-170px !important;
+  transform: scale(1) !important;
+  opacity: 1
+}
+
 /* ANIMACIONES */
 
-@keyframes iconDown {
-  0% {
-    opacity: .2;
-    transform: translateY(-10px);
+@keyframes pulse {
+  0%{opacity: 1}
+  100%{opacity: .5}
+}
+
+@keyframes upAnim {
+  from {
+    top: 800px;
+    opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
-    transform: translateY(0);
+    top: 0;
   }
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width:1030px) {
+
+  header h1 {
+    padding: 0 170px;
+    text-align: center;
+  }
+
+  .workInfo {
+    height: 800px;
+  }
+
+  .tagWork {
+    height: 865px;
+    width: 325px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  /*  interactividad*/
+
+  .bioButton:active {
+    background: #000;
+    color: #ffe226;
+    transition: 0s;
+  }
+
+  .recentButton:active {
+    background: #000;
+    color: #fff;
+    transition: 0s;
+  }
+
+  .estudiosButton:active {
+    background: #3b74ff;
+    color: #fff;
+    transition: 0s;
+  }
+
+  .blogButton:active {
+    transition: 0s;
+  }
+
+  /*  element */
+
+  .contain {
+    width: 500px;
+  }
+
+  .workInfo {
+    height: 2500px;
+  }
+
+  .workInfoWrap {
+    flex-direction: column;
+  }
+
+  .tagWork {
+    height: 865px;
+    width: 540px;
+    border-right: none;
+    border-bottom: 1px solid #cbcbcb;
+  }
+
+  .stack {
+    padding: 50px 0;
+  }
+
+  .stackLogos {
+    flex-direction: column;
+  }
+
+  .recentGrid {
+    grid-template: repeat(3,200px) / 1fr;
+  }
+
 }

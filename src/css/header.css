@@ -1,0 +1,83 @@
+.header {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.48);
+  width: 100%;
+  height: 72px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .7s;
+}
+
+.header:hover {
+  background: #000;
+}
+
+.openedH {
+  animation: OpenH .8s forwards;
+}
+
+.closedH {
+  animation: CloseH .8s forwards;
+}
+
+.socialContainH {
+  margin-left: 25px;
+}
+
+.socialContainH a {
+  color: #fff;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.socialContainH i {
+  transition: .4s;
+}
+
+.socialContainH i:hover {
+  transform: scale(1.6);
+}
+
+.socialContainH img {
+  height: 35px;
+  transition: .4s
+}
+
+.socialContainH img:hover {
+  transform: scale(1.6);
+}
+
+.icono-imgH {
+  border-radius: 50%;
+  height: 60px;
+}
+
+.contactoButtonH {
+  margin-right: 25px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: 2px solid #ffe226;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffe226;
+  transition: .4s
+}
+
+.contactoButtonH:hover{
+  background: #ffe226;
+  color: #000;
+}
+
+/* ANIMACIONES */
+
+@keyframes OpenH {
+  from{top: -72px}
+  to{top: 0}
+}
+@keyframes CloseH {
+  from{top: 0}
+  to{top: -72px}
+}
