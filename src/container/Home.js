@@ -69,7 +69,7 @@ class Home extends Component {
         }
 
         //MEJORES
-        if(window.scrollY + window.innerHeight >= this.refs.recent.offsetTop + this.refs.recent.offsetHeight)
+        if(window.scrollY + window.innerHeight >= this.refs.recent.offsetTop + (this.refs.recent.offsetHeight/2))
         {
           this.refs.recentTitle.classList.add('show');
           this.setState({
@@ -80,7 +80,7 @@ class Home extends Component {
         }
 
         //STACK
-        if(window.scrollY + window.innerHeight >= this.refs.stack.offsetTop + this.refs.stack.offsetHeight) {
+        if(window.scrollY + window.innerHeight >= this.refs.stack.offsetTop + (this.refs.stack.offsetHeight/2)) {
           this.refs.stackTitle.classList.add('show');
           this.refs.stackTexto.classList.add('show');
           this.refs.stackSubTitle.classList.add('show');
@@ -90,14 +90,14 @@ class Home extends Component {
         }
 
         //actTexto
-        if(window.scrollY + window.innerHeight >= this.refs.act.offsetTop + this.refs.act.offsetHeight)
+        if(window.scrollY + window.innerHeight >= this.refs.act.offsetTop + (this.refs.act.offsetHeight/2))
         {
           this.refs.actTitle.classList.add('show');
           this.refs.actTexto.classList.add('show');
         }
 
         //ESTUDIOS
-        if(window.scrollY + window.innerHeight >= this.refs.estudios.offsetTop + this.refs.estudios.offsetHeight)
+        if(window.scrollY + window.innerHeight >= this.refs.estudios.offsetTop + (this.refs.estudios.offsetHeight/2))
         {
           this.refs.estudiosTitle.classList.add('show');
           this.refs.estudiosText.classList.add('show');
@@ -113,7 +113,7 @@ class Home extends Component {
 
         //BLOG
 
-        if(window.scrollY + window.innerHeight >= this.refs.blog.offsetTop +this.refs.blog.offsetHeight)
+        if(window.scrollY + window.innerHeight >= this.refs.blog.offsetTop +(this.refs.blog.offsetHeight/2))
         {
           this.refs.blogTitle.classList.add('show');
           this.refs.blogText.classList.add('show');

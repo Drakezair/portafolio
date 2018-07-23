@@ -420,7 +420,7 @@ font-size: 25px;
 .act {
   text-align: center;
   background: #3b74ff;
-  padding: 80px;
+  padding: 80px 0;
   color: #fff;
 }
 
@@ -446,7 +446,7 @@ font-size: 25px;
 }
 
 .estudios {
-  padding: 100px;
+  padding: 100px 0;
   text-align: center;
 }
 
@@ -640,10 +640,14 @@ font-size: 25px;
   }
 
   .blogButton:active {
-    transition: 0s;
+    transition: 0s
   }
 
   /*  element */
+
+  .contactoButton {
+    padding: 10px 15px;
+  }
 
   .contain {
     width: 500px;
@@ -676,4 +680,16 @@ font-size: 25px;
     grid-template: repeat(3,200px) / 1fr;
   }
 
+}
+
+@media screen and (max-width:500px) {
+
+  .contain {
+    width: 360px;
+  }
+
+  header h1 {
+    padding: 0 40px;
+    font-size: 18px;
+  }
 }

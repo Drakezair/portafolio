@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Biografia from '../container/Biografia';
 
-const container= document.getElementById('asd')
+const container= document.getElementById('container')
 
-ReactDOM.render(<h1>Hola mundo 21!</h1>, container);
+ReactDOM.render(<Biografia />, container);
