@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+}
+
+.header {
+  position: static !important;
+  background: #234960 !important;
+  box-shadow: 1px 0 5px !important;
+}
+
+.contactoButtonH {
+  color: #98ca3f !important;
+  border-color: #98ca3f !important;
+}
+
+.contactoButtonH:hover {
+  background: #98ca3f !important;
+  color: #234960 !important;
+}
+
+.socialContainH a {
+  color: #98ca3f !important;
+}
+
+.contain {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.cer-header {
+  height: 292px;
+  background: #1c3643;
+  padding: 40px 4px;
+}
+
+.headerWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #fff;
+}
+
+.slide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  animation: intermitent 5s infinite alternate linear ;
+}
+
+.carrerasGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  padding: 50px 0;
+}
+
+.carreraContain {
+  margin-bottom: 10px;
+}
+
+.carreraHeader {
+  background:rgb(41, 41, 41);
+  width: 400px;
+  padding: 15px;
+  border-radius: 8px 8px 0 0;
+  font-family: 'Montserrat Alternates', sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.carreraHeader img {
+  height: 100px;
+  margin-right: 10px;
+}
+
+.curso {
+  padding: 5px;
+  border: 1px solid #dddddc;
+  border-bottom: none;
+  display: flex;
+  align-items: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.curso:hover {
+  background: #f2f2f2;
+}
+
+.curso img {
+  height: 45px;
+  margin-right: 20px;
+}
+
+.curso p {
+  font-size: 13px;
+}
+
+.cursoButton {
+  text-decoration: none;
+  color: #000;
+}
+
+.carreraOpen {
+  transform: rotateZ(180deg);
+}
+
+.carreraFooter {
+  font-size: 25px;
+  background: #f2f2f2;
+  border: 1px solid #dddddc;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+}
+
+@keyframes intermitent {
+  from {opacity: 0}
+  5% {opacity: 1}
+  95% {opacity: 1}
+  to {opacity: 0}
+}

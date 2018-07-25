@@ -309,7 +309,7 @@ class Home extends Component {
               Y constantemente estoy buscando conocimientos en el area del videojuego. <br/>
               Todos mis estudios los realizo a travez de platzi y su comunidad.
             </p>
-            <a href="" className="estudiosButton" ref='estudiosButton' >Mis Certificados</a>
+            <a href="certificados" className="estudiosButton" ref='estudiosButton' >Mis Certificados</a>
           </div>
         </div>
         <div className="divider"></div>

@@ -4,6 +4,7 @@ module.exports = {
   entry: {
     index: path.resolve(__dirname, 'src/js/index.js'),
     biografia: path.resolve(__dirname, 'src/js/biografia.js'),
+    certificados: path.resolve(__dirname, 'src/js/certificados.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -35,7 +36,7 @@ module.exports = {
        use: ["css-loader", "sass-loader"]
      },
       {
-        test: /\.(jpg|jpeg|png|gif|svg)$/,
+        test: /\.(webp|jpg|jpeg|png|gif|svg)$/,
         use: {
           loader: 'url-loader',
           options: {

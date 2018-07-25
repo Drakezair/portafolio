@@ -5,7 +5,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = (env) => {
   const plugins = [
-    new ExtractTextPlugin("css/[name].[hash].css")
+    new ExtractTextPlugin("css/[name].[hash].css"),
+
   ]
 
   if (env.NODE_ENV === 'production') {
@@ -18,6 +19,8 @@ module.exports = (env) => {
 
     entry: {
       index: path.resolve(__dirname, 'src/js/index.js'),
+      biografia: path.resolve(__dirname, 'src/js/biografia.js'),
+      certificados: path.resolve(__dirname, 'src/js/certificados.js'),
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -62,7 +65,7 @@ module.exports = (env) => {
           })
         },
         {
-          test: /\.(jpg|jpeg|png|gif|svg)$/,
+          test: /\.(webp|jpg|jpeg|png|gif|svg)$/,
           use: {
             loader: 'url-loader',
             options: {
