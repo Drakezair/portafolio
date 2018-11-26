@@ -24,7 +24,7 @@ class Header extends Component {
           </a>
         </div>
         <img src={Avatar} alt="Icono" className="icono-imgH" />
-        <a href="" className="contactoButtonH">Contáctame</a>
+        <a href="mailto:andradex.js07@gmail.com" className="contactoButtonH">Contáctame</a>
       </div>
     )
   }

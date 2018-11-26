@@ -144,7 +144,7 @@ class Home extends Component {
               <img src={require('../assets/img/Platzi.png')} alt="platzi"/>
             </a>
           </div>
-          <a href="" className="contactoButton particlesFix">Contáctame</a>
+          <a href="mailto:andradex.js07@gmail.com" className="contactoButton particlesFix">Contáctame</a>
           <h1 className='particlesFix' >Sigue hambriento, Sigue alocado, Nunca pares de aprender</h1>
           <img src={Avatar} alt="Avatar" className="avatar particlesFix"/>
           <h1 className="headerText particlesFix" >Front-end | Videojuegos | Aplicaciones | Otros <br/><span>@Drakezair</span></h1>
@@ -160,7 +160,7 @@ class Home extends Component {
             <p ref='bioText' >
               Empece mi camino Front-end desde hace 2, <br/>
               desarrollo videojuegos hace un año. Me encanta enfrentarme
-              a todo tipo de retos. Vivo para aprender y me fascina enseña. <br/>
+              a todo tipo de retos. Vivo para aprender y me fascina enseñar. <br/>
               Soy curioso y me apasiona la tecnología. <br/>
               Soy estudiante en Platzi.
             </p>
@@ -293,7 +293,8 @@ class Home extends Component {
           <div className="contain">
             <h2 className="actTitle" ref='actTitle' >Actualmente</h2>
             <p className="actTexto" ref='actTexto' >
-              Colaboro con el desarrollo de "sinMarca", <br/>
+            Soy lider de desarollo en <a style={{textDecoration:'none', color:'white'}} href='http://agenciaelnerd.com/' >Creative Nerd </a> <br></br>
+              Colaboro con el desarrollo de "Risender", <br/>
               desarrollo proyectos personales; Realizo trabajos Freelance debes en cuando. <br/>
               Imparto cursos de programación basica.
             </p>

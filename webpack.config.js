@@ -59,12 +59,6 @@ module.exports = (env) => {
           })
         },
         {
-          test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-             use: ['css-loader', 'sass-loader']
-          })
-        },
-        {
           test: /\.(webp|jpg|jpeg|png|gif|svg)$/,
           use: {
             loader: 'url-loader',
